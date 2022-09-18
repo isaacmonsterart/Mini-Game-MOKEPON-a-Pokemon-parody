@@ -13,6 +13,9 @@ function iniciarJuego() {
     botonAgua.addEventListener('click', ataqueAgua);
     let botonPlanta = document.getElementById('boton-planta');
     botonPlanta.addEventListener('click', ataquePlanta);
+
+    let botonReiniciar = document.getElementById('boton-reiniciar');
+    botonReiniciar.addEventListener('click', reiniciarJuego);
 }
 
 function seleccionarMascotaJugador() {
@@ -49,17 +52,17 @@ function seleccionarMascotaEnemigo() {
 }
 
 function ataqueFuego(){
-    ataqueJugador = 'FUEGO';
+    ataqueJugador = '🔥';
     ataqueAleatorioEnemigo()
 }
 
 function ataqueAgua(){
-    ataqueJugador = 'AGUA';
+    ataqueJugador = '💧';
     ataqueAleatorioEnemigo()
 }
 
 function ataquePlanta(){
-    ataqueJugador = 'PLANTA';
+    ataqueJugador = '🍃';
     ataqueAleatorioEnemigo()
 }
 
@@ -67,11 +70,11 @@ function ataqueAleatorioEnemigo() {
     let ataqueAleatorio = aleatorio(1,3);
 
     if(ataqueAleatorio == 1) {
-        ataqueEnemigo = 'FUEGO';
+        ataqueEnemigo = '🔥';
     } else if(ataqueAleatorio == 2) {
-        ataqueEnemigo = 'AGUA';
+        ataqueEnemigo = '💧';
     } else {
-        ataqueEnemigo = 'PLANTA';
+        ataqueEnemigo = '🍃';
     }
 
     combate()
@@ -126,8 +129,20 @@ function crearMensajeFinal(resultadoFinal) {
     parrafo.innerHTML = resultadoFinal;
 
     sectionMensajes.appendChild(parrafo);
+
+    let botonFuego = document.getElementById('boton-fuego');
+    botonFuego.disabled = true;
+    let botonAgua = document.getElementById('boton-agua');
+    botonAgua.disabled = true;
+    let botonPlanta = document.getElementById('boton-planta');
+    botonPlanta.disabled = true;
+
 }
 
+
+function reiniciarJuego() {
+    location.reload();
+}
 
 function aleatorio(min, max) {
     return Math.floor(Math.random() * (max - min + 1 ) + min);
