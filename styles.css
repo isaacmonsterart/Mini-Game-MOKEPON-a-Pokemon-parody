@@ -1,31 +1,88 @@
 @import url('http://fonts.cdnfonts.com/css/pokemon-solid');
-                
-:root {
-    --blue-mokepon-title: #3E5EA4;
-    --yellow-mokepon-title: #FFCC01;
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
+:root {
+    --blue-mokepon-title: #3E5EA4;
+    --blue-mokepon-title-shadow: #00204A;
+    --yellow-mokepon-title: #FFCC01;
+    --bg-color-overlay: rgba(0, 32, 74, .5);
+    font-size: 62.5%;
+}
 
+body {
+    background-image: url("./img/pokemon_field.png");
+    width: 100vw;
+    height: 100vh;
+    object-fit: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0 0 0 1000px var(--bg-color-overlay);
+
+}
+
+/* Título Moképon */
 .titulo {
     color: var(--yellow-mokepon-title);
     -webkit-text-stroke: 1px var(--blue-mokepon-title);
     font-family: 'Pokemon Solid', sans-serif;
-    font-size: 56px;
+    font-size: 8rem;
     width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
+    text-shadow: -6px 5px 0px var(--blue-mokepon-title-shadow);
 }
 
 .titulo span {
-    margin: -1px;
+    margin: 0px;
 }
 
 .titulo span:nth-child(2),
 .titulo span:nth-child(4),
 .titulo span:nth-child(6){
-    z-index: 0;
+    z-index: 1;
 }
+
+/* M */
+.titulo span:nth-child(1) {
+    rotate: -10deg ;
+}
+/* o */
+.titulo span:nth-child(2) {
+    margin-bottom: 10px;
+    rotate: -5deg ;
+}
+/* k */
+.titulo span:nth-child(3) {
+    margin-bottom: 17px;   
+    rotate: -2deg ;
+}
+/* é */
+.titulo span:nth-child(4) {
+    margin-bottom: 25px;   
+}
+/* p */
+.titulo span:nth-child(5) {
+    margin-bottom: 17px;   
+    rotate: 5deg ;
+}
+/* o */
+.titulo span:nth-child(6) {
+    margin-bottom: 10px;   
+    rotate: 5deg ;
+}
+/* n */
+.titulo span:nth-child(7) {
+    rotate: 10deg ;
+}
+
 
 #seleccionar-mascota {
     display: flex;
