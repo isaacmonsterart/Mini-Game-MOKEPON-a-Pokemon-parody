@@ -1,0 +1,53 @@
+@import url('http://fonts.cdnfonts.com/css/pokemon-solid');
+                
+:root {
+    --blue-mokepon-title: #3E5EA4;
+    --yellow-mokepon-title: #FFCC01;
+}
+
+
+.titulo {
+    color: var(--yellow-mokepon-title);
+    -webkit-text-stroke: 1px var(--blue-mokepon-title);
+    font-family: 'Pokemon Solid', sans-serif;
+    font-size: 56px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo span {
+    margin: -1px;
+}
+
+.titulo span:nth-child(2),
+.titulo span:nth-child(4),
+.titulo span:nth-child(6){
+    z-index: 0;
+}
+
+#seleccionar-mascota {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.tarjeta-de-mokepon {
+    width: 100px;
+    height: 100px;
+    background: aquamarine;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.subtitulo {
+
+}
+
+.tarjetas {
+    display: flex;
+    gap: 10px;
+}

@@ -1,48 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+
+    <link href="http://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
+                
+
+
     <title>MOKEPON!</title>
-    <script src="./js/mokepon.js"></script>
+    <script src='./js/mokepon.js'></script>
+    <link rel='stylesheet' href='./styles.css'>
 </head>
 <body>
-    <h1>MOKEPON! 🔥💧🍃</h1>
+    <section id='seleccionar-mascota'>
+        <h1 class='titulo'>
+            <span>M</span>
+            <span>o</span>
+            <span>k</span>
+            <span>é</span>
+            <span>p</span>
+            <span>o</span>
+            <span>n</span>
+        </h1>
+
+        <h2 class='subtitulo'>Elige tu mascota:</h2>
+
+        <div class='tarjetas'>
+            <label class='tarjeta-de-mokepon' for='hipodoge'>Hipodoge</label>
+            <input type='radio' name='mascota'' id='hipodoge'>
     
-    <section id="seleccionar-mascota">
-        <h2>Elige tu mascota:</h2>
+            <label class='tarjeta-de-mokepon' for='capipepo'>Capipepo</label>
+            <input type='radio' name='mascota'' id='capipepo'>
+    
+            <label class='tarjeta-de-mokepon' for='ratigueya'>Ratigueya</label>
+            <input type='radio' name='mascota'' id='ratigueya'>
+        </div>
 
-        <label for="hipodoge">Hipodoge</label>
-        <input type="radio" name="mascota"" id="hipodoge">
 
-        <label for="capipepo">Capipepo</label>
-        <input type="radio" name="mascota"" id="capipepo">
-
-        <label for="ratigueya">Ratigueya</label>
-        <input type="radio" name="mascota"" id="ratigueya">
-
-        <button id="boton-mascota">Seleccionar</button>
+        <button id='boton-mascota'>Seleccionar</button>
     </section>
     
-    <section id="seleccionar-ataque">
+    <section id='seleccionar-ataque'>
         <h2>Elige tu ataque:</h2>
 
-        <p>Tu mascota <span id="mascota-jugador"></span> tiene <span id="vidas-jugador">3</span> vidas</p>
-        <p>La mascota <span id="mascota-enemigo"></span> del enemigo tiene <span id="vidas-enemigo">3</span> vidas</p>
+        <p>Tu mascota <span id='mascota-jugador'></span> tiene <span id='vidas-jugador'>3</span> vidas</p>
+        <p>La mascota <span id='mascota-enemigo'></span> del enemigo tiene <span id='vidas-enemigo'>3</span> vidas</p>
         
         <p>
-            <button id="boton-fuego">Fuego 🔥</button>
-            <button id="boton-agua">Agua 💧</button>
-            <button id="boton-planta">Planta 🍃</button>
+            <button id='boton-fuego'>Fuego 🔥</button>
+            <button id='boton-agua'>Agua 💧</button>
+            <button id='boton-planta'>Planta 🍃</button>
         </p>
     </section>
 
-    <section id="mensajes">
+    <section id='mensajes'>
     </section>
 
-    <section id="reiniciar">
-        <button id="boton-reiniciar">Reiniciar</button>
+    <section id='reiniciar'>
+        <button id='boton-reiniciar'>Reiniciar</button>
     </section>
 
 </body>

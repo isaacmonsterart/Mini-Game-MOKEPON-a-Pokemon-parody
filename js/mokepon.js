@@ -97,15 +97,15 @@ function combate() {
     let spanVidasEnemigo = document.getElementById('vidas-enemigo');
     
     if(ataqueJugador == ataqueEnemigo) {
-        crearMensaje("😴 EMPATE");
+        crearMensaje('😴 EMPATE');
     } else if ((ataqueJugador == 'FUEGO' && ataqueEnemigo == 'PLANTA') 
     || (ataqueJugador == 'AGUA' && ataqueEnemigo == 'FUEGO') 
     || (ataqueJugador == 'PLANTA' && ataqueEnemigo == 'AGUA')) {
-        crearMensaje("👑 GANASTE");
+        crearMensaje('👑 GANASTE');
         vidasEnemigo--;
         spanVidasEnemigo.innerHTML = vidasEnemigo;
     } else {
-        crearMensaje("🤡 PERDISTE");
+        crearMensaje('🤡 PERDISTE');
         vidasJugador--;
         spanVidasJugador.innerHTML = vidasJugador;
     }
