@@ -1,5 +1,5 @@
 @import url('http://fonts.cdnfonts.com/css/pokemon-solid');
-
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;500&display=swap');
 
 * {
     box-sizing: border-box;
@@ -16,7 +16,7 @@
 }
 
 body {
-    background-image: url("./img/pokemon_field.png");
+    background-image: url("./img/battlefield-1.jpg");
     width: 100vw;
     height: 100vh;
     object-fit: contain;
@@ -26,6 +26,16 @@ body {
     box-shadow: inset 0 0 0 1000px var(--bg-color-overlay);
 
 }
+
+
+/* 
+
+fuente fredoka  
+
+font-family: 'Fredoka', sans-serif;
+
+
+ */
 
 /* Título Moképon */
 .titulo {
@@ -40,7 +50,7 @@ body {
     text-shadow: -6px 5px 0px var(--blue-mokepon-title-shadow);
 }
 
-.titulo span {
+.titulo-mokepon {
     margin: 0px;
 }
 
